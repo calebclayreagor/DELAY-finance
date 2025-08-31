@@ -1,0 +1,5 @@
+/stock-market-dataset/hist
+/stock-market-dataset/etfs
+/stock-market-dataset/stocks
+.env
+pandasai.log
