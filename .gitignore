@@ -1,5 +1,6 @@
 /stock-market-dataset/hist
 /stock-market-dataset/etfs
 /stock-market-dataset/stocks
+/stock-market-dataset/exports
 .env
 pandasai.log
