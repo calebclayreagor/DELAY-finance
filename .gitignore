@@ -2,5 +2,17 @@
 /stock-market-dataset/etfs
 /stock-market-dataset/stocks
 /stock-market-dataset/exports
+/DELAY-dataset/training
+/DELAY-dataset/validation
+/DELAY/Checkpoints
+/DELAY/DELAY
+/DELAY/example-data
+/DELAY/Networks
+/DELAY/.gitignore
+/DELAY/DELAY.png
+/DELAY/LICENSE.md
+/DELAY/README.md
+/DELAY/requirements.txt
+/DELAY/RunDELAY.py
 .env
 pandasai.log
