@@ -4,6 +4,15 @@
 /DELAY-dataset/training/
 /DELAY-dataset/validation/
 /DELAY-dataset/prediction/
-/DELAY/
+/DELAY/Checkpoints/
+/DELAY/DELAY/
+/DELAY/example-data/
+/DELAY/Networks/
+/DELAY/DELAY.png
+/DELAY/LICENSE.md
+/DELAY/README.md
+/DELAY/requirements.txt
+/DELAY/RunDELAY.py
+/utils/__pycache__/
 .env
 pandasai.log
