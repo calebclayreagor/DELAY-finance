@@ -1,22 +1,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-class BubbleChart:
-    def __init__(self, area, bubble_spacing = 0):
+class BubblePlot:
+    def __init__(self, df, bubble_spacing = 1):
         """
         Setup for bubble collapse.
 
         Parameters
         ----------
-        area : array-like
-            Area of the bubbles.
-        bubble_spacing : float, default: 0
+        df : pd.DataFrame
+            Area of the bubbles (index contains the labels).
+        bubble_spacing : float, default: 1
             Minimal spacing between bubbles after collapsing.
-
-        Notes
-        -----
-        If "area" is sorted, the results might look weird.
         """
+        self.df = df
+        area = self.df.values
         area = np.asarray(area)
         r = np.sqrt(area / np.pi)
 
@@ -108,15 +106,13 @@ class BubbleChart:
                 self.step_dist = self.step_dist / 2
         return self
 
-    def plot(self, ax, labels, c, s, fs_min = 0):
+    def plot(self, ax, c, s, fs_min = 0):
         """
         Draw the bubble plot.
 
         Parameters
         ----------
         ax : matplotlib.axes.Axes
-        labels : list
-            Labels of the bubbles.
         c : color
             Color of the bubbles.
         s : float
@@ -124,6 +120,7 @@ class BubbleChart:
         fs_min : float
             Minimum font size.
         """
+        labels = self.df.index
         if isinstance(c, str):
             c = [c] * len(labels)
         for i in range(len(self.bubbles)):
